@@ -7,6 +7,9 @@ const decompress = require('decompress')
 const decompressTargz = require('decompress-targz')
 const ProgressBar = require('progress')
 
+var version = '1.14.0'
+var urlBase = `https://github.com/tsqllint/tsqllint/releases/download/${version}`
+
 var runTime = ''
 if (os.type() === 'Darwin') {
   runTime = 'osx-x64'
@@ -55,10 +58,8 @@ function download (url, dest) {
           reject(err)
         })
   })
-};
+}
 
-var version = 'v1.13.1'
-var urlBase = `https://github.com/tsqllint/tsqllint/releases/download/${version}`
 download(`${urlBase}/${runTime}.tgz`, `${runTime}.tgz`, (err) => {
   if (err) {
     console.log(err)
