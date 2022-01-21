@@ -1,6 +1,6 @@
 {
     "name": "tsqllint",
-    "version": "1.11.1",
+    "version": "1.11.2",
     "description": "Configurable linting for TSQL.",
     "keywords": [
         "TSQL",
@@ -11,13 +11,12 @@
     },
     "repository": "tsqllint/tsqllint",
     "files": [
-        "scripts/install.js",
+        "install.js",
         "tsqllint.js"
     ],
     "bin": "./tsqllint.js",
     "scripts": {
-        "install": "node ./scripts/install.js",
-        "build-changelog": "conventional-changelog -i CHANGELOG.md -u -s -r 0 && git add CHANGELOG.md"
+        "install": "node ./install.js"
     },
     "os": [
         "win32",
@@ -30,11 +29,10 @@
         "decompress": "^4.2.0",
         "decompress-targz": "^4.1.1",
         "follow-redirects": "^1.2.6",
-        "progress": "^2.0.0"
+        "progress": "^2.0.0",
+        "tsqllint": "file:tsqllint-1.11.2.tgz"
     },
     "devDependencies": {
-        "conventional-changelog": "^2.0.3",
-        "release-it": "^7.4.7",
-        "standard": "^10.0.3"
+        "standard": "^16.0.4"
     }
 }
