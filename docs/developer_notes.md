@@ -23,5 +23,5 @@ npm pack
 ## Install Local Package
 
 ```
-
+npm install -g tsqllint-1.11.2.tgz
 ```
