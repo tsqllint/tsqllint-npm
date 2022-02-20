@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+const version = '1.14.5'
+
 const https = require('follow-redirects').https
 const os = require('os')
 const fs = require('fs')
@@ -57,7 +59,6 @@ function download (url, dest) {
   })
 };
 
-var version = '1.14.0'
 var urlBase = `https://github.com/tsqllint/tsqllint/releases/download/${version}`
 download(`${urlBase}/${runTime}.tgz`, `${runTime}.tgz`, (err) => {
   if (err) {
