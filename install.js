@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const version = '1.14.5'
+const version = '1.15.1'
 
 const https = require('follow-redirects').https
 const os = require('os')
